@@ -18,22 +18,31 @@ const handleNavbar = () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
         nav.classList.add('scrolled');
-        
-        // Detect if we are over a light section
-        const lightSection = document.querySelector('.section-light');
-        if (lightSection) {
-            const rect = lightSection.getBoundingClientRect();
-            if (rect.top <= 80 && rect.bottom >= 80) {
-                nav.classList.add('light-nav');
-            } else {
-                nav.classList.remove('light-nav');
-            }
-        }
     } else {
         nav.classList.remove('scrolled');
-        nav.classList.remove('light-nav');
     }
 };
+
+// Mobile Menu Toggle
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('nav-links');
+
+if (burger) {
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+    });
+}
+
+// Close menu on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
 
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -41,8 +50,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
+            const headerOffset = 80;
+            const elementPosition = target.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
             window.scrollTo({
-                top: target.offsetTop - 80,
+                top: offsetPosition,
                 behavior: 'smooth'
             });
         }
