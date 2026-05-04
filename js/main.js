@@ -1,38 +1,48 @@
 // Reveal elements on scroll
-const revealElements = document.querySelectorAll('[data-reveal]');
-
 const revealOnScroll = () => {
+    const revealElements = document.querySelectorAll('[data-reveal]');
     const windowHeight = window.innerHeight;
+    
     revealElements.forEach(el => {
         const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
+        const elementVisible = 100;
+        
         if (elementTop < windowHeight - elementVisible) {
             el.classList.add('active');
         }
     });
 };
 
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+// Navbar scroll effect
+const handleNavbar = () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+};
 
-// Smooth scroll for nav links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-// Simple Navbar effect on scroll
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.padding = '1rem 0';
-        nav.style.backgroundColor = 'rgba(10, 10, 12, 0.95)';
-    } else {
-        nav.style.padding = '1.5rem 0';
-        nav.style.backgroundColor = 'rgba(10, 10, 12, 0.8)';
-    }
+    revealOnScroll();
+    handleNavbar();
+});
+
+window.addEventListener('load', () => {
+    revealOnScroll();
+    handleNavbar();
 });
