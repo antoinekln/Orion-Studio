@@ -7,10 +7,10 @@
   --text-dim: #888888;
   --glass: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --font: 'Outfit', 'Inter', sans-serif;
+  --font: 'Roboto', 'Inter', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;500;700&display=swap');
 
 * {
   margin: 0;
