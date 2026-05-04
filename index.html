@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORION STUDIO | ARCHITECTURE & CODE</title>
-    <meta name="description" content="Design & Développement de haut niveau.">
+    <title>ORION STUDIO | L'excellence du développement</title>
+    <meta name="description" content="Studio spécialisé en IA, architectures sécurisées et interfaces premium.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
     <nav>
         <div class="container nav-content">
-            <a href="#" class="logo">ORION STUDIO</a>
+            <a href="#" class="logo">ORION <span class="gradient-text">STUDIO</span></a>
             <div class="nav-links">
                 <a href="#team">Équipe</a>
                 <a href="#services">Expertise</a>
@@ -23,97 +23,104 @@
         </div>
     </nav>
 
-    <header class="container hero">
-        <h1 data-reveal>ORION<br>STUDIO</h1>
-        <p data-reveal>Studio de design et développement. Nous bâtissons des systèmes numériques performants pour des projets d'exception.</p>
+    <header class="section-dark">
+        <div class="container hero">
+            <h1 data-reveal>L'ingénierie d'excellence pour vos <span class="gradient-text">projets ambitieux.</span></h1>
+            <p data-reveal>Studio de développement spécialisé en IA, architectures sécurisées et interfaces premium. Nous bâtissons le futur, une ligne de code à la fois.</p>
+        </div>
     </header>
 
-    <section id="team" class="container">
-        <h2 class="section-title" data-reveal>Le Duo</h2>
-        <div class="team-grid">
-            <!-- Antoine -->
-            <div class="team-card" data-reveal>
-                <div class="profile-wrap">
-                    <img src="assets/images/Antoine.png" alt="Antoine Klein">
-                </div>
-                <div>
+    <section id="team" class="section-light">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Le Duo <span class="gradient-text">Orion</span></h2>
+            <div class="team-grid">
+                <!-- Antoine -->
+                <div class="team-card" data-reveal>
+                    <div class="profile-wrap">
+                        <img src="assets/images/Antoine.png" alt="Antoine Klein">
+                    </div>
                     <span class="role">AI & Vision Engineer</span>
                     <h3>Antoine Klein</h3>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 0.9rem;">Spécialiste en IA générative et vision par ordinateur. Conception d'interfaces multimodales.</p>
+                    <p style="color: var(--text-dim-on-light);">Spécialiste en IA générative et interfaces multimodales. Transforme la data en expériences immersives.</p>
                     <ul>
                         <li>Agentic AI</li>
-                        <li>Vision</li>
-                        <li>Fullstack</li>
+                        <li>Computer Vision</li>
+                        <li>Frontend Premium</li>
                     </ul>
                 </div>
-            </div>
-            <!-- Hugo -->
-            <div class="team-card" data-reveal>
-                <div class="profile-wrap">
-                    <img src="assets/images/hugo.jpg" alt="Hugo Merelle">
-                </div>
-                <div>
+                <!-- Hugo -->
+                <div class="team-card" data-reveal>
+                    <div class="profile-wrap">
+                        <img src="assets/images/hugo.jpg" alt="Hugo Merelle">
+                    </div>
                     <span class="role">Systems & Quant Architect</span>
                     <h3>Hugo Merelle</h3>
-                    <p style="color: var(--text-dim); margin-bottom: 1.5rem; font-size: 0.9rem;">Expert en architectures critiques et finance quantitative. Développement d'algorithmes de précision.</p>
+                    <p style="color: var(--text-dim-on-light);">Expert en architectures critiques et algorithmes de haute précision. Bâtit le moteur derrière la vision.</p>
                     <ul>
-                        <li>Backend</li>
-                        <li>Quant</li>
-                        <li>Security</li>
+                        <li>Secure Backend</li>
+                        <li>Finance Quant</li>
+                        <li>Distributed Systems</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="container">
-        <h2 class="section-title" data-reveal>ADN Technique</h2>
-        <div class="expertise-grid">
-            <div class="expertise-card" data-reveal>
-                <h4>Intelligence Artificielle</h4>
-                <p>Systèmes d'agents autonomes et intégration de modèles de langage avancés.</p>
-            </div>
-            <div class="expertise-card" data-reveal>
-                <h4>Sécurité & Privacy</h4>
-                <p>Architectures Zero-Trust et protocoles de chiffrement de haut niveau.</p>
-            </div>
-            <div class="expertise-card" data-reveal>
-                <h4>Design & Frontend</h4>
-                <p>Interfaces minimalistes et fluides. Focus sur l'ergonomie et la performance.</p>
-            </div>
-            <div class="expertise-card" data-reveal>
-                <h4>Infrastructure</h4>
-                <p>Backend scalable et systèmes distribués pour charges critiques.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <div class="contact-container">
-            <div>
-                <h2 class="section-title" data-reveal>Contact</h2>
-                <p style="color: var(--text-dim); font-size: 1.1rem;" data-reveal>Discutons de votre prochain projet ambitieux.</p>
-            </div>
-            <div class="contact-form" data-reveal>
-                <div id="form-status"></div>
-                <form id="contact-form" action="https://formspree.io/f/xpqbpljg" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" required placeholder="NOM" data-fs-field>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" required placeholder="EMAIL" data-fs-field>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="4" required placeholder="VOTRE PROJET" data-fs-field></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn" data-fs-submit-btn>Envoyer</button>
-                </form>
+    <section id="services" class="section-dark">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Notre <span class="gradient-text">ADN Technique</span></h2>
+            <div class="expertise-grid">
+                <div class="expertise-card" data-reveal>
+                    <h4>🤖 IA & Agents</h4>
+                    <p>Déploiement de LLMs (Gemini, Mistral) et systèmes d'agents autonomes pour automatiser vos processus métier.</p>
+                </div>
+                <div class="expertise-card" data-reveal>
+                    <h4>🛡️ Sécurité & Privacy</h4>
+                    <p>Protection des actifs via cryptage avancé (AES-256) et architectures Zero-Trust. RGPD by design.</p>
+                </div>
+                <div class="expertise-card" data-reveal>
+                    <h4>🎨 Frontend Premium</h4>
+                    <p>Interfaces ultra-fluides, micro-animations et designs haute fidélité pour un impact immédiat.</p>
+                </div>
+                <div class="expertise-card" data-reveal>
+                    <h4>⚙️ Backend Scalable</h4>
+                    <p>Infrastructures robustes capables de supporter des charges critiques sans faillir.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="container" style="padding: 4rem 0; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">
-        <p>© 2024 ORION STUDIO</p>
+    <section id="contact" class="section-light">
+        <div class="container">
+            <div class="contact-container">
+                <div>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;" data-reveal>Prêt à <span class="gradient-text">Propulser</span> votre projet ?</h2>
+                    <p style="color: var(--text-dim-on-light); font-size: 1.2rem;" data-reveal>Parlons technique, parlons business. Votre futur commence par une ligne de code.</p>
+                </div>
+                <div class="contact-form" data-reveal>
+                    <div id="form-status"></div>
+                    <form id="contact-form" action="https://formspree.io/f/xpqbpljg" method="POST">
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" name="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" required placeholder="Parlez-nous de votre projet..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer la demande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-light" style="padding: 4rem 0; text-align: center; border-top: 1px solid var(--dark-border);">
+        <p style="color: var(--text-dim-on-light); font-size: 0.9rem;">© 2024 ORION STUDIO. Tous droits réservés.</p>
     </footer>
 
     <script>
@@ -123,7 +130,7 @@
             formId: 'xpqbpljg',
             onSuccess: function() {
                 const status = document.getElementById('form-status');
-                status.innerHTML = '<div class="success-msg">TRANSMIS.</div>';
+                status.innerHTML = '<div class="success-msg" style="color: #050a18; border: 1px solid #050a18; padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">Message envoyé avec succès !</div>';
                 document.getElementById('contact-form').style.display = 'none';
             }
         });
